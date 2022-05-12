@@ -171,12 +171,13 @@ playerInput_0.addEventListener("keyup", (e) => {
   const secondPlayerName = playerInput_1.value;
   if (secondPlayerName !== "" && firstPlayerName !== "")
     startBtn.classList.add("show");
+  else startBtn.classList.remove("show");
 });
 
 playerInput_1.addEventListener("keyup", (e) => {
   const secondPlayerName = e.target.value;
   const firstPlayerName = playerInput_0.value;
   if (secondPlayerName !== "" && firstPlayerName !== "")
-    startBtn.classList.add(".show");
+    startBtn.classList.add("show");
   else startBtn.classList.remove("show");
 });
