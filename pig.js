@@ -42,7 +42,7 @@ function onStart() {
     firstPlayerName.toLowerCase().includes("bot") &&
     secondPlayerName.toLowerCase().includes("bot")
   ) {
-    alert("Ikkalasi ham bot bolishi mumkin emas");
+    message.innerText = "Ikkalasi ham bot bolishi mumkin emas";
     gameZone.classList.add("hidden");
     loginZone.classList.remove("hidden");
   } else {
@@ -120,7 +120,7 @@ function onReset() {
   _scores = [0, 0];
 
   if (winnerExist) {
-    players[currentPlayer].ATTRIBUTE_NODE.classList.remove("player--winner");
+    players[currentPlayer].classList.remove("player--winner");
     winnerExist = false;
   }
 
