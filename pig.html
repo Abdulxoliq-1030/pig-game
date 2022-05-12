@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="pig.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <h1 style="text-align: center; color: #fff" class="message"></h1>
+    <main>
+      <section class="login-zone">
+        <div>
+          <div class="form-group">
+            <label for="player_0"></label>
+            <input
+              value="player-1"
+              type="text"
+              id="player_0"
+              placeholder="Enter name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="player_1"></label>
+            <input
+              value="bot"
+              type="text"
+              id="player_1"
+              placeholder="Enter name"
+            />
+          </div>
+          <!-- <div class="form-group">
+            <label for="bot">Select player for bot</label>
+            <select id="bot">
+              <option value="-" selected>Nobody</option>
+              <option value="0">Player-1</option>
+              <option value="1">Player-2</option>
+            </select>
+          </div> -->
+          <button class="btn btn--start show" id="start">Start</button>
+        </div>
+      </section>
+
+      <section class="game-zone hidden">
+        <section class="player player--active">
+          <h2 class="name">Player 1</h2>
+          <p class="score">0</p>
+          <div class="current">
+            <p class="current-label">Current</p>
+            <p class="current-score">0</p>
+          </div>
+        </section>
+
+        <section class="player">
+          <h2 class="name">Player 2</h2>
+          <p class="score">0</p>
+          <div class="current">
+            <p class="current-label">Current</p>
+            <p class="current-score">0</p>
+          </div>
+        </section>
+
+        <img src="./images/dice-5.png" alt="Playing dice" class="dice hidden" />
+        <button class="btn btn--new">🔃 New game</button>
+        <button class="btn btn--roll">🎲 Roll dice</button>
+        <button class="btn btn--hold">📥 Hold</button>
+      </section>
+    </main>
+    <script src="pig.js"></script>
+  </body>
+</html>
