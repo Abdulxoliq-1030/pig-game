@@ -57,7 +57,7 @@ function onStart() {
       message.innerText = "Game starts after 3 seconds...";
       if (botIndex === 0) setTimeout(startBOT, 3000);
       else {
-        message.innerText = "Sizdan bosin";
+        message.innerText = "You will go first";
       }
     }
   }
@@ -76,12 +76,12 @@ function onRollDice() {
 
   // add dice value currentScore
   if (dice === 1) {
-    message.innerText = "Eyy, men tugatdim";
+    message.innerText = "Hey, I'm done";
     nextPlayer();
   } else {
     currentScore += dice;
     currentScores[currentPlayer].innerText = currentScore;
-    message.innerText = `Man tashadim, ${dice} tushdi.`;
+    message.innerText = `I got number  ${dice}.`;
   }
 
   if (currentPlayer === botIndex) {
@@ -101,9 +101,9 @@ function onHold() {
   if (!winnerExist) {
     if (!isBot) {
       startBOT();
-      message.innerText = "Bot tasha";
+      message.innerText = "It's yours";
     } else {
-      message.innerText = "Siz tashang";
+      message.innerText = "You throw";
     }
   }
   nextPlayer();
